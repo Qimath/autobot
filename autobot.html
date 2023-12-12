@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Dummy HTML Page</title>
+    <script type="text/javascript">
+      window.$crisp = [];
+      window.CRISP_WEBSITE_ID = "ea7340c8-5b8e-480c-913d-9d3adc79f4c4";
+      (function () {
+        d = document;
+        s = d.createElement("script");
+        s.src = "https://client.crisp.chat/l.js";
+        s.async = 1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
+    <script>
+        $crisp.push(["on", "chat:initiated", function() {
+            $crisp.push(["do", "message:send", ["text", "J'ai une question concernant Passe Ton Billet"]])
+        }])
+    </script>
+  </head>
+  <body>
+    <h1>Test page</h1>
+
+    <button onClick='$crisp.push(["do", "session:reset"]);'>New Conversation</button>
+  </body>
+</html>
